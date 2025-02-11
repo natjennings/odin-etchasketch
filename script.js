@@ -19,12 +19,19 @@ generateBtn.addEventListener("click", () => {
 
 
 function generateGrid(userInput) {
+    grid.replaceChildren()
+
     console.log("user input is " + userInput)
-    let gridItem = document.createElement("div")
-    gridItem.classList.add("default")
-    let gridItemHW = heightWidth / Number(userInput)
+    
     for (i = 0; i < userInput; i++) {
         for (j = 0; j < userInput; j++) {
+            let gridItem = document.createElement("div")
+            gridItem.classList.add("default")
+            
+            let gridItemHW = heightWidth / Number(userInput)
+            console.log(gridItemHW)
+            gridItem.style.height = (gridItemHW + "px")
+            gridItem.style.width = (gridItemHW + "px")
             grid.appendChild(gridItem)
         }
     }
