@@ -18,6 +18,8 @@ generateBtn.addEventListener("click", () => {
 
 
 
+
+
 function generateGrid(userInput) {
     grid.replaceChildren()
 
@@ -27,6 +29,7 @@ function generateGrid(userInput) {
         for (j = 0; j < userInput; j++) {
             let gridItem = document.createElement("div")
             gridItem.classList.add("default")
+            gridItem.classList.add("square")
             
             let gridItemHW = heightWidth / Number(userInput)
             console.log(gridItemHW)
@@ -35,4 +38,11 @@ function generateGrid(userInput) {
             grid.appendChild(gridItem)
         }
     }
-}
+    let squares = document.querySelectorAll(".default")
+    squares.forEach((square) => {
+        square.addEventListener("mouseover", () => {
+            square.classList.add("hovered")
+            square.classList.remove("default")
+        })
+    })
+    }

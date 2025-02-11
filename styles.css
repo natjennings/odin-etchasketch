@@ -28,3 +28,11 @@
     background-color: blueviolet;
     /* height and width = 1000 / userinput */
 }
+
+.square {
+    color: red;
+}
+
+.hovered {
+    background-color: black;
+}
