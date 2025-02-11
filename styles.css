@@ -3,6 +3,9 @@
     width: 1000px;
     height: 1000px;
     margin: 30px 0px 0px 30px;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .top {
@@ -20,3 +23,7 @@
     margin: 0px 30px;
 }
 
+.default {
+    border: 1px solid black;
+    /* height and width = 1000 / userinput */
+}
